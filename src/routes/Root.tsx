@@ -37,7 +37,7 @@ export function Root() {
       <div className={header()}>
         <div className={container()}>
           <div className={content()}>
-            <h1 className={title()}>ToDo List</h1>
+            <h1 className={title()}>To-Do List</h1>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ export function Root() {
         <div className={content()}>
           <form className={form()} onSubmit={event => handleCreatedTodo(event, input)}>
             <div className={field()}>
-              <input className={write()} onChange={event => setInput(event.target.value)} value={input} type='text' placeholder='Adicionar uma tarefa' />
+              <input className={write()} onChange={event => setInput(event.target.value)} value={input} type='text' placeholder='Adicionar nova tarefa' />
               <SquaresPlusIcon className={squares()} />
             </div>
             <button className={add()} disabled={!input ? true : false} type='submit'>
@@ -54,7 +54,7 @@ export function Root() {
           </form>
           <div className={info()}>
             <p><span className={create()}>Tarefas criadas: </span>{todos.length}</p>
-            <p><span className={done()}>Concluídas: </span>{check} de {todos.length}</p>
+            <p><span className={done()}>Concluídas: </span>{todos.length === 0 ? 0 : `${check} de ${todos.length}`}</p>
           </div>
           <ul className={card()}>
             {todos.map(todo => (
@@ -64,7 +64,7 @@ export function Root() {
           {!todos.length &&
             <div className={not()}>
               <p className={first()}>Crie suas primeiras ToDo List.</p>
-              <p className={work()}>ToDo List é uma ferramenta para planejar e organize seu fluxo de trabalho.</p>
+              <p className={work()}>ToDo List é uma ferramenta para planejar e organizar seu fluxo de trabalho.</p>
             </div>
           }
         </div>
