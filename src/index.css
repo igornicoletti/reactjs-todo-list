@@ -5,11 +5,4 @@
 body {
   color: #f8f8f2;
   background: #282a36;
-	font-size: 0.875rem;
-  line-height: 1.25rem;
-
-@media (min-width: 768px) { 
-  font-size: 1rem;
-  line-height: 1.5rem;
- }
 }

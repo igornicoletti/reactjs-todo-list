@@ -1,6 +1,6 @@
-import { Link, isRouteErrorResponse, useRouteError } from 'react-router-dom'
-import { variantsError } from './styles/Variants'
+import { variantsError } from './styles/variants'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
+import { Link, isRouteErrorResponse, useRouteError } from 'react-router-dom'
 
 export function ErrorPage() {
   const error = useRouteError()

@@ -37,8 +37,8 @@ export const variantsForm = tv({
 export const variantsTitle = tv({
   slots: {
     info: 'w-full flex items-center justify-between pt-8 gap-2',
-    create: 'text-dracula-cyan pr-1',
-    done: 'text-dracula-purple pr-1',
+    created: 'text-dracula-cyan pr-1',
+    finished: 'text-dracula-purple pr-1',
   }
 })
 
