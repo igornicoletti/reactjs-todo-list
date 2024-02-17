@@ -15,7 +15,6 @@ export function Root() {
   const [input, setInput] = useState<string>('')
   const [todos, setTodos] = useState<TodoListProps[]>([])
 
-
   const handleCreatedTodo = (e: FormEvent<HTMLFormElement>, task: string) => {
     e.preventDefault()
     const createdTodo: TodoListProps = { id: Date.now(), task, selected: false }
