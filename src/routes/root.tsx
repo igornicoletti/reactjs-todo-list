@@ -62,8 +62,8 @@ export function Root() {
           </ul>
           {!todos.length &&
             <div className={not()}>
-              <p className={first()}>Crie suas primeiras To-Do List.</p>
-              <p className={work()}>To-Do List é uma ferramenta para planejar e organizar seu fluxo de trabalho.</p>
+              <p className={first()}>Crie suas primeiras To-Do List</p>
+              <p className={work()}>To-Do List é uma ferramenta para planejar e organizar seu fluxo de trabalho</p>
             </div>
           }
         </div>
