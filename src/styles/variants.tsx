@@ -45,7 +45,7 @@ export const variantsTitle = tv({
 export const variantsCard = tv({
   slots: {
     card: 'w-full flex flex-col-reverse gap-2',
-    list: 'w-full flex items-center justify-between gap-6 md:gap-16 rounded p-2 md:p-4 border border-dracula-line hover:border-dracula-cyan bg-dracula-line/10 hover:bg-dracula-line/25 transition ease-in-out duration-300',
+    list: 'w-full flex items-center justify-between gap-6 md:gap-16 rounded p-4 border border-dracula-line hover:border-dracula-cyan bg-dracula-line/10 hover:bg-dracula-line/25 transition ease-in-out duration-300',
     label: 'peer w-full flex items-center gap-2 md:gap-4 cursor-pointer',
     checkbox: 'peer min-h-4 min-w-4 appearance-none rounded border border-dracula-cyan accent-dracula-cyan cursor-pointer checked:appearance-auto transition ease-in-out duration-300',
     text: 'peer-checked:line-through peer-checked:text-dracula-comment',
