@@ -28,7 +28,7 @@ export const variantsForm = tv({
   slots: {
     form: 'w-full flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-center -mt-12',
     field: 'relative w-full h-12',
-    write: 'w-full h-full py-2 pl-12 pr-4 rounded bg-dracula-bg border border-dracula-line hover:border-white focus:border-white placeholder:text-dracula-line focus:outline-none transition ease-in-out duration-300 peer',
+    write: 'w-full h-full py-2 pl-12 pr-4 rounded bg-dracula-dark border border-dracula-line hover:border-white focus:border-white placeholder:text-dracula-line focus:outline-none transition ease-in-out duration-300 peer',
     squares: 'absolute size-6 bottom-3 left-3 text-dracula-line peer-hover:text-white peer-focus:text-white transition ease-in-out duration-300',
     add: 'w-full md:max-w-44 flex items-center justify-center px-4 h-12 uppercase rounded font-medium text-dracula-line bg-dracula-cyan disabled:bg-dracula-line disabled:text-white disabled:cursor-not-allowed disabled:scale-100 active:scale-95 transition ease-in-out duration-300'
   }
