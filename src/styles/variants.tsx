@@ -29,7 +29,7 @@ export const variantsForm = tv({
     form: 'w-full flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-center -mt-12',
     field: 'relative w-full h-12',
     write: 'w-full h-full py-2 pl-12 pr-4 rounded bg-dracula-bg border border-dracula-line hover:border-white focus:border-white placeholder:text-dracula-line focus:outline-none transition ease-in-out duration-300 peer',
-    squares: 'absolute size-5 bottom-3.5 left-4 text-dracula-line peer-hover:text-white peer-focus:text-white transition ease-in-out duration-300',
+    squares: 'absolute size-6 bottom-3 left-3 text-dracula-line peer-hover:text-white peer-focus:text-white transition ease-in-out duration-300',
     add: 'w-full md:max-w-44 flex items-center justify-center px-4 h-12 uppercase rounded font-medium text-dracula-line bg-dracula-cyan disabled:bg-dracula-line disabled:text-white disabled:cursor-not-allowed disabled:scale-100 active:scale-95 transition ease-in-out duration-300'
   }
 })
@@ -45,12 +45,12 @@ export const variantsTitle = tv({
 export const variantsCard = tv({
   slots: {
     card: 'w-full flex flex-col-reverse gap-2',
-    list: 'w-full flex items-center justify-between gap-6 md:gap-16 rounded p-4 border border-dracula-line hover:border-dracula-cyan bg-dracula-line/10 hover:bg-dracula-line/25 transition ease-in-out duration-300',
-    label: 'peer w-full flex items-center gap-4 cursor-pointer',
+    list: 'w-full flex items-center justify-between gap-6 md:gap-16 rounded p-2 md:p-4 border border-dracula-line hover:border-dracula-cyan bg-dracula-line/10 hover:bg-dracula-line/25 transition ease-in-out duration-300',
+    label: 'peer w-full flex items-center gap-2 md:gap-4 cursor-pointer',
     checkbox: 'peer min-h-4 min-w-4 appearance-none rounded border border-dracula-cyan accent-dracula-cyan cursor-pointer checked:appearance-auto transition ease-in-out duration-300',
     text: 'peer-checked:line-through peer-checked:text-dracula-comment',
     remove: 'peer-has-[:checked]:hidden hover:text-dracula-red transition ease-in-out duration-300',
-    trash: 'size-5 ',
+    trash: 'size-4 md:size-5',
   }
 })
 
