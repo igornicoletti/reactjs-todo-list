@@ -1,6 +1,6 @@
 import { Todo } from '../components/todo'
-import { FormEvent, useState } from 'react'
 import { TodoListProps } from '../types/todo'
+import { FormEvent, useEffect, useState } from 'react'
 import { SquaresPlusIcon } from '@heroicons/react/24/outline'
 import { variantsCard, variantsForm, variantsHome, variantsNot, variantsTitle } from '../styles/variants'
 
@@ -30,6 +30,15 @@ export function Root() {
   const handleCheckedTodo = (selected: boolean) => {
     selected ? setCheck(prev => prev + 1) : setCheck(prev => prev - 1)
   }
+
+  useEffect(() => {
+    const todosData = localStorage.getItem('reactjs-todo-list')
+    todosData && setTodos(JSON.parse(todosData))
+  }, [])
+
+  useEffect(() => {
+    todos.length && localStorage.setItem('reactjs-todo-list', JSON.stringify(todos))
+  }, [todos])
 
   return (
     <div className={base()}>

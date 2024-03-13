@@ -7,9 +7,9 @@ export const variantsError = tv({
     content: 'flex flex-col items-center text-center gap-16 py-16',
     wrapper: 'flex flex-col gap-4',
     status: 'text-xl',
-    title: 'text-5xl font-medium',
+    title: 'text-3xl font-semibold',
     message: 'text-sm',
-    back: 'flex items-center gap-2 text-sm',
+    back: 'flex items-center text-sm gap-2',
     icon: 'size-4',
   }
 })
@@ -19,8 +19,8 @@ export const variantsHome = tv({
     base: 'relative h-full min-h-screen w-full grid content-start overflow-x-hidden',
     header: 'w-full border-b border-b-dracula-line bg-dracula-line/10',
     container: 'w-full max-w-screen-xl mx-auto px-6',
-    content: 'flex flex-col items-center gap-6 pt-6 pb-12',
-    title: 'text-3xl font-semibold uppercase',
+    content: 'flex flex-col gap-6 pt-6 pb-12',
+    title: 'text-3xl font-semibold text-center uppercase',
   }
 })
 
