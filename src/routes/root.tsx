@@ -13,32 +13,35 @@ const { base, header, container, content, title } = variantsHome()
 export function Root() {
   const [check, setCheck] = useState<number>(0)
   const [input, setInput] = useState<string>('')
-  const [todos, setTodos] = useState<TodoListProps[]>([])
+  const [todos, setTodos] = useState<TodoListProps[]>(() => {
+    const storedStateAsJSON = localStorage.getItem('reactjs-todo-list')
+    if (storedStateAsJSON) {
+      const data = JSON.parse(storedStateAsJSON)
+      return data
+    }
+
+    return []
+  })
+
+  useEffect(() => {
+    localStorage.setItem('reactjs-todo-list', JSON.stringify(todos))
+  }, [todos])
 
   const handleCreatedTodo = (e: FormEvent<HTMLFormElement>, task: string) => {
     e.preventDefault()
     const createdTodo: TodoListProps = { id: Date.now(), task, selected: false }
-    setTodos(prev => [...prev, createdTodo])
+    setTodos((prev) => [...prev, createdTodo])
     setInput('')
   }
 
   const handleDeletedTodo = (id: number) => {
-    const deletedTodo = todos.filter(todo => todo.id !== id)
+    const deletedTodo = todos.filter((todo) => todo.id !== id)
     setTodos(deletedTodo)
   }
 
   const handleCheckedTodo = (selected: boolean) => {
-    selected ? setCheck(prev => prev + 1) : setCheck(prev => prev - 1)
+    selected ? setCheck((prev) => prev + 1) : setCheck((prev) => prev - 1)
   }
-
-  useEffect(() => {
-    const todosData = localStorage.getItem('reactjs-todo-list')
-    todosData && setTodos(JSON.parse(todosData))
-  }, [])
-
-  useEffect(() => {
-    todos.length && localStorage.setItem('reactjs-todo-list', JSON.stringify(todos))
-  }, [todos])
 
   return (
     <div className={base()}>
@@ -65,7 +68,7 @@ export function Root() {
             <p><span className={finished()}>Concluídas: </span>{todos.length === 0 ? 0 : `${check} de ${todos.length}`}</p>
           </div>
           <ul className={card()}>
-            {todos.map(todo => (
+            {todos.map((todo) => (
               <Todo key={todo.id} todo={todo} handleDeletedTodo={handleDeletedTodo} handleCheckedTodo={handleCheckedTodo} />
             ))}
           </ul>
